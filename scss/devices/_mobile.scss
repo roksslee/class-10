@@ -57,7 +57,7 @@
         row-gap: 3vh;
 
         > article {
-            @include flexBox2Column;
+            @include flexBoxColumn;
             color: whitesmoke;
             text-align: center;
             row-gap: 2vh;
