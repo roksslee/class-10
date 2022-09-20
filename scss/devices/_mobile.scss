@@ -1,0 +1,99 @@
+@media (min-width: 200px) {
+    main > section > a {
+        padding: 2%;
+        font-size: 23px;
+        text-align: center;
+    }
+    
+    header {
+        color: whitesmoke;
+        @include bgPic(
+            "/img/banner.jpg",
+            inherit,
+            50vh
+            );
+        // This file is included in style.scss, and the SCSS will rendered in CSS folder. So no need to change the URL of image.
+
+        > nav {
+            @include flexBox(row);
+        }
+
+        ul {
+            display: none;
+        }
+
+        h1 {
+            padding: 3%;
+            font-family: $h1Title;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+
+        > article {
+            @include flexBoxDefault(
+                row,
+                center,
+                center
+                );
+            height: 60%;
+        }
+
+        span {
+            color: $defaultRed;
+        }
+
+        h2 {
+            font-size: $mobileTitleSizeH2;
+            width: 60%;
+        }
+    }
+
+    .work {
+        padding: 10% 0;
+        background-color: $bgColorBlue;
+        @include flexBoxColumn;
+        justify-content: center;
+        align-items: center;
+        row-gap: 3vh;
+
+        > article {
+            @include flexBoxColumn;
+            color: whitesmoke;
+            text-align: center;
+            row-gap: 2vh;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        h2 {
+            color: $defaultRed;
+        }
+
+        > figure {
+            width: 90%;
+            @include flexBox2(row,wrap);
+            column-gap: 2vh;
+            row-gap: 2vh;
+        }
+
+        img {
+            width: 15vh;
+            height: 15vh;
+        }
+
+        footer {
+            padding: 3% 0;
+            background-color: $bgColorBlue;
+            border-top: 0.5px solid whitesmoke;
+            color: whitesmoke;
+            text-align: center;
+            line-height: 1.5;
+
+            > a {
+                color: $defaultRed;
+            }
+        }
+    }
+}
