@@ -49,7 +49,7 @@
 
     // to all section
     main > section {
-        padding: 5%;
+        padding: 10% 5%;
         @include flexBoxColumn;
         align-items: center;
         row-gap: 3vh;

@@ -80,7 +80,7 @@ input {
     color: #ec664d;
   }
   main > section {
-    padding: 5%;
+    padding: 10% 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
