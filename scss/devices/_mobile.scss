@@ -30,31 +30,109 @@
         }
 
         > article {
+            width: 100%;
+            height: 60%;
             @include flexBoxDefault(
-                row,
+                column,
                 center,
                 center
                 );
-            height: 60%;
-        }
-
-        span {
-            color: $defaultRed;
-        }
-
-        h2 {
+            text-align: center;
+            text-transform: uppercase;
             font-size: $mobileTitleSizeH2;
-            width: 60%;
+            
+            span {
+                color: $defaultRed;
+            }
         }
     }
 
-    .work {
-        padding: 10% 0;
-        background-color: $bgColorBlue;
+    // to all section
+    main > section {
+        padding: 5%;
         @include flexBoxColumn;
-        justify-content: center;
         align-items: center;
         row-gap: 3vh;
+        color: gray;
+    }
+
+    // section about
+    .about {
+        h2 {
+            color: $bgColorBlue;
+        }
+
+        > article {
+            @include flexBox(row);
+            flex-wrap: wrap;
+            column-gap: 2vh;
+        }
+
+        > article > div {
+            width: 30%;
+            border-radius: 50%;
+            @include bgPic('/img/pic-9.jpg');
+        }
+
+        > article p {
+            width: 55%;
+        }
+
+        > article p:last-child {
+            width: 100%;
+        }
+
+        // graph
+        section {
+            width: 90%;
+            @include flexBoxColumn;
+            row-gap: 2vh;
+
+            p {
+                color: $bgColorBlue;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            article {
+                @include flexBoxColumn;
+                row-gap: 1vh;
+
+                > aside {
+                    display: flex;
+
+                    > div {
+                        height: 2vh;
+                    }
+
+                    > div:first-child {
+                        width: 70%;
+                        background-color: $defaultRed;
+                    }
+
+                    > div:last-child {
+                        width: 30%;
+                        background-color: lightgray;
+                    }
+                }
+
+                > aside:first-child {
+                    width: 70%;
+                    justify-content: space-between;
+                }
+
+                > aside:last-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // section work
+    .work {
+        background-color: $bgColorBlue;
+        align-items: center;
 
         > article {
             @include flexBoxColumn;
@@ -72,15 +150,79 @@
         }
 
         > figure {
-            width: 90%;
             @include flexBox2(row,wrap);
-            column-gap: 2vh;
-            row-gap: 2vh;
+            column-gap: 1vh;
+            row-gap: 1vh;
         }
 
-        img {
-            width: 15vh;
-            height: 15vh;
+            img {
+                width: 15vh;
+                height: 15vh;
+            }
+    }
+
+    // section about
+    .services {
+        h2 {
+            color: $bgColorBlue;
+        }
+
+        h3 {
+            color: $bgColorBlue;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        > article {
+            @include flexBoxDefault(column, left, center);
+            row-gap: 5vh;
+        }
+
+        aside {
+            width: 70%;
+            @include flexBoxColumn;
+            align-items: center;
+            row-gap: 3vh;
+
+            > i {
+                width: 10vh;
+                height: 10vh;
+                padding: 5%;
+                background-color: $defaultRed;
+                border-radius: 50%;
+                @include flexBoxColumn;
+                justify-content: center;
+                align-items: center;
+                color: whitesmoke;
+                font-size: 40px;
+            }
+        }
+    }
+
+    // section contact
+    .contact {
+        background-color: $bgColorBlue;
+    }
+
+    footer {
+        padding: 3% 0;
+        background-color: $bgColorBlue;
+        border: 0.5px solid lightgray;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.5;
+
+        > a {
+            color: $defaultRed;
+            text-decoration: none;
+
+            :hover {
+                color: whitesmoke;
+            }
         }
     }
 }
